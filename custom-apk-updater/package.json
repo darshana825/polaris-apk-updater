@@ -1,0 +1,10 @@
+{
+  "name": "custom-apk-updater",
+  "version": "0.0.1",
+  "description": "Express module to work with android-auto-updater-client. This module will support for apk files hosted in S3 cloud storage.",
+  "scripts": {},
+  "dependencies": {
+    "aws-sdk": "^2.198.0"
+  },
+  "author": "DSP"
+}
