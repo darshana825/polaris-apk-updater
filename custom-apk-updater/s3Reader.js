@@ -35,15 +35,18 @@ const reader = {
 
                     const updates = {};
 
-                    const availableFiles = content.reduce((filesList, file) => {
-                        if (reader.apkPattern.test(file.Key)) {
+                    const availableFiles = content.reduce((filesList, file, index) => {
+                        if ((content.length - 1) === index) {
+                            if (reader.apkPattern.test(file.Key)) {
 
-                            filesList.push({
-                                'version': parseInt(RegExp.$2),
-                                'filename': file.Key,
-                                'filepath': `${S3.endpoint.href}${reader.s3params.Bucket}/${file.Key}`
-                            });
+                                filesList.push({
+                                    'version': parseInt(RegExp.$2),
+                                    'filename': file.Key,
+                                    'filepath': `${S3.endpoint.href}${reader.s3params.Bucket}/${file.Key}`
+                                });
+                            }
                         }
+
 
                         return filesList;
                     }, []);

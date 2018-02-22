@@ -30,8 +30,8 @@ const customApkUpdator = require('./custom-apk-updater');
 customApkUpdator.run(app, '/check-apk-updates', {
     bucket: 'polaris-apk-releases',
     region: 'us-west-1',
-    accessKey: 'AKIAJAGFUH63YZH3BGPA',
-    secretKey: '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'
+    accessKey: 'AKIAI5EFRFPGOG5G2NZA',
+    secretKey: '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'
 });
 
 // catch 404 and forward to error handler
